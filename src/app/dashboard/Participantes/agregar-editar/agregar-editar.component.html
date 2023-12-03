@@ -1,0 +1,91 @@
+
+<h1 mat-dialog-title style="font-weight: 500;" >{{titulo}}</h1>
+
+<form [formGroup]="participanteForm" style="padding:12px">
+
+    <div class="row mb-2">
+
+        <!-- NOMBRES -->
+        <div class="col-6">
+            <input type="hidden" formControlName="participanteId">
+            <mat-form-field  appearance="fill">
+                <mat-label>Nombre</mat-label>
+                <input matInput formControlName="nmbrs">
+                <mat-error *ngIf="isValidField('nmbrs')">
+                    {{ getFieldError('nmbrs') }}
+                </mat-error>
+            </mat-form-field>
+        </div>
+
+         <!-- APELLIDOS -->
+         <div class="col-6">
+          <mat-form-field  appearance="fill">
+              <mat-label>Apellidos</mat-label>
+              <input matInput formControlName="aplld">
+              <mat-error *ngIf="isValidField('aplld')">
+                  {{ getFieldError('aplld') }}
+              </mat-error>
+          </mat-form-field>
+        </div>
+    </div>
+
+
+    <div class="row mb-2">
+
+      <!-- FECHA NACIMIENTO -->
+      <div class="col-6">
+        <mat-form-field appearance="fill" style="width: 100%;">
+          <mat-label>Fecha</mat-label>
+          <input matInput formControlName="fechaNac" [matDatepicker]="picker" style="width: 100%;">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+          <mat-error *ngIf="isValidField('fechaNac')">
+            {{ getFieldError('fechaNac') }}
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+
+      <!-- DNI -->
+      <div class="col-6">
+        <mat-form-field  appearance="fill">
+            <mat-label>DNI</mat-label>
+            <input matInput formControlName="dni">
+            <mat-error *ngIf="isValidField('dni')">
+                {{ getFieldError('dni') }}
+            </mat-error>
+        </mat-form-field>
+      </div>
+
+    </div>
+
+        <!-- CORREO -->
+    <div class="row mb-2">
+        <mat-form-field  appearance="fill">
+            <mat-label>Correo</mat-label>
+            <input type="email" formControlName="correoE" matInput placeholder="admin@admin.com">
+            <mat-error *ngIf="isValidField('correoE')">
+                {{ getFieldError('correoE') }}
+            </mat-error>
+        </mat-form-field>
+    </div>
+
+
+    <div class="row mb-2">
+        <div class="col text-end">
+            <button class="btn btn-secondary m-2" mat-dialog-close>Cancelar</button>
+            <button class="btn btn-primary" type="submit" (click)="guardarParticipante()" [disabled]="participanteForm.invalid">{{tituloBoton}}</button>
+        </div>
+    </div>
+
+</form>
+
+
+
+
+
+
+
+
+
+

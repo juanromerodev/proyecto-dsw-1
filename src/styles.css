@@ -1,0 +1,47 @@
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+
+.mat-header-cell {
+  color:black;
+  font-size:14px;
+  font-family: "Helvetica Neue",;
+  font-weight: bold!important;
+}
+
+.mat-cell {
+font-family: "Helvetica Neue",;
+}
+
+.mat-header-cell {
+  text-align: center !important;
+}
+
+.mat-cell {
+  text-align: center !important;
+}
+
+.mat-tooltip.tooltip {
+  font-size: 12px;
+}
+
+.mat-header-cell {
+  color: black; /* Cambia el color del texto a negro */
+  font-weight: bold; /* Aplica negrita al texto */
+  font-size: 15px;
+}
+
+th.mat-header-cell {
+  color: white;
+  background-color:#2f4053;
+}
+
+.mat-row:hover {
+  background-color: rgb(240, 239, 239);
+}

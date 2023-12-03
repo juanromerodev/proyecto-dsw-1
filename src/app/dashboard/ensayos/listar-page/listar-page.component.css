@@ -1,0 +1,17 @@
+table {
+  width: 100%;
+}
+
+.iconosAccion {
+margin: 3px;
+}
+.success-icon{
+color:green
+}
+.danger-icon{
+color:red
+}
+
+.example-margin {
+margin: 0 10px;
+}
